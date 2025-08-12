@@ -1,4 +1,5 @@
 from pathlib import Path
+import os
 
 import plotly.graph_objects as go
 
@@ -47,12 +48,12 @@ def display_plot(
 
         if img:
             fig.write_image(
-                save_path / f"{filename}.png", width=width, height=height, scale=5
+                os.path.join(save_path, f"{filename}.png"), width=width, height=height, scale=5
             )
         if html:
-            fig.write_html(save_path / f"{filename}.html")
+            fig.write_html(os.path.join(save_path, f"{filename}.png"))
         if s_json:
-            fig.write_json(save_path / f"{filename}.json")
+            fig.write_json(os.path.join(save_path, f"{filename}.png"))
 
     return fig
 
