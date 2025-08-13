@@ -51,9 +51,9 @@ def display_plot(
                 os.path.join(save_path, f"{filename}.png"), width=width, height=height, scale=5
             )
         if html:
-            fig.write_html(os.path.join(save_path, f"{filename}.png"))
+            fig.write_html(os.path.join(save_path, f"{filename}.html"))
         if s_json:
-            fig.write_json(os.path.join(save_path, f"{filename}.png"))
+            fig.write_json(os.path.join(save_path, f"{filename}.json"))
 
     return fig
 
