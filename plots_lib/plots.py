@@ -26,6 +26,7 @@ def display_plot(
     title_data=None,
     xaxis_data=None,
     yaxis_data=None,
+    **kwargs,
 ):
     fig = go.Figure()
     generate_lines(fig, data)
@@ -40,6 +41,7 @@ def display_plot(
         legend=configure_legend(legend),
         width=width,
         height=height,
+        **kwargs,
     )
 
     if filename and save_path:
